@@ -57,6 +57,12 @@ const int verificationChoix(const string p_texte, const string p_entreeErreur, c
 	}
 }
 
+
+/// <summary>
+/// Cette fonction permet le calcule d'un SEL à partir de la règle de Cramer!
+/// </summary>
+/// <param name="matrices">Le tableau de pointeur pour les matrices enregistrées.</param>
+/// <returns>Retourne le pointeur de la matrice des inconnus.</returns>
 Matrice* cramer(vector<Matrice*> matrices) {
 	// Vérifie qu'il y a des matrices enregistrés. Sinon, on retourne un pointeur null.
 	if (matrices.size() == 0) {
@@ -72,7 +78,7 @@ Matrice* cramer(vector<Matrice*> matrices) {
 	// Demande à l'utilisateur l'index des matrices.
 	int a = verificationChoix("Matrice coefficient : ", "Erreur", "Erreur", 0, matrices.size() - 1);
 
-	int b = verificationChoix("Matrice resultat : ", "Erreur", "Erreur", 0, matrices.size() - 1);
+	int b = verificationChoix("Matrice constante : ", "Erreur", "Erreur", 0, matrices.size() - 1);
 
 	// Verification des nb de lignes.
 	if (matrices[a]->getM() != matrices[b]->getM()) {
@@ -86,22 +92,22 @@ Matrice* cramer(vector<Matrice*> matrices) {
 	}
 
 	if (matrices[b]->getM() != 3 || matrices[b]->getN() != 1) {
-		cout << "ERREUR : La matrice des résultats doit être une matrice 3x1!" << endl;
+		cout << "ERREUR : La matrice des constantes doit être une matrice 3x1!" << endl;
 		return nullptr;
 	}
 
-	cout << "determinant :";
+	cout << "Déterminant des coefficiants:";
 	float detA = matrices[a]->determinant();
 	cout << detA << endl;
 
 	// Si le déterminant est de 0, on cherche si la matrice b est homogène.
 	if (detA == 0) {
 		float totalB = 0;
-		for (unsigned int i = 0; i < matrices[b]->getData()->size(); i++) {
+		for (unsigned int i = 0; i < matrices[b]->getData()->size(); i++) { // Calcul de l'addition des résultats
 			totalB += (*matrices[b]->getData())[i][0];
 		}
 
-		if (totalB == 3 * (*matrices[b]->getData())[0][0]) {
+		if (totalB == 3 * (*matrices[b]->getData())[0][0]) { // Vérifie que le SEL soit homogène.
 			cout << "La matrice des résultats est homogène! Il y a donc une infinité de solution possible !" << endl;
 			return nullptr;
 		}
@@ -114,33 +120,36 @@ Matrice* cramer(vector<Matrice*> matrices) {
 
 	cout << "Ce SEL comporte une solution possible!" << endl;
 
+	// Variables temporaires
 	Matrice* x = new Matrice(3, 1);
-
-	vector<vector<float>>* temp = new vector<vector<float>>(3, vector<float>(3, 0));
 	vector<vector<float>>* data = new vector<vector<float>>(3, vector<float>(1, 0));
 
-	for (unsigned int k = 0; k < 3; k++) {
-		for (unsigned int i = 0; i < 3; i++) {
-			for (unsigned int j = 0; j < 3; j++) {
-				(*temp)[i][j] = (*matrices[a]->getData())[i][j];
+	for (unsigned int k = 0; k < 3; k++) { // Calcul de Cramer.
+		vector<vector<float>>* temp = new vector<vector<float>>(3, vector<float>(3, 0));
+		for (unsigned int i = 0; i < 3; i++) { // Remise de la matrice des coefficants à ses valeurs de défaut
+			for (unsigned int j1 = 0; j1 < 3; j1++) {
+				(*temp)[i][j1] = (*matrices[a]->getData())[i][j1];
 			}
 		}
 
-		for (unsigned int j = 0; j < 3; j++) {
-			(*temp)[k][j] = (*matrices[b]->getData())[0][j];
+		for (unsigned int j = 0; j < 3; j++) { // Changement de la colonne pour les résultats.
+			(*temp)[j][k] = (*matrices[b]->getData())[j][0];
 		}
 
-
-		Matrice matriceTemp(1, 3);
+		Matrice matriceTemp(3, 3); // Matrice temporaire pour le calcule du déterminant et l'affichage.
 		matriceTemp.setData(temp);
 		float tempDet = matriceTemp.determinant();
+		cout << "----------------/\\X" << k << "--------------" << endl;
+		matriceTemp.afficher();
+		cout << "Déterminant : " << tempDet << endl << endl;
 
-		(*data)[k][0] = tempDet / detA;
+		(*data)[k][0] = tempDet / detA; // On ajoute la valeur de l'inconue trouvé dans la matrice des inconnus.
 
 
 
 	}
-
+	// Affichage.
+	cout << "-------------------------------------------------------------------------" << endl;
 	x->setData(data);
 	cout << "Matrice des inconnus correctement enregistrée à la dernière position!" << endl;
 	x->afficher();
