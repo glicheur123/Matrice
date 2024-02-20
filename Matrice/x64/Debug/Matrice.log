@@ -1,15 +1,3 @@
-﻿  main.cpp
-C:\Users\marca\Desktop\Github\Math\Matrice\Matrice\main.cpp(81,18): warning C4244: 'argument': conversion from 'int' to '_Ty', possible loss of data
-          with
-          [
-              _Ty=float
-          ]
-C:\Users\marca\Desktop\Github\Math\Matrice\Matrice\main.cpp(101,86): warning C4267: 'argument': conversion from 'size_t' to 'const int', possible loss of data
-C:\Users\marca\Desktop\Github\Math\Matrice\Matrice\main.cpp(103,86): warning C4267: 'argument': conversion from 'size_t' to 'const int', possible loss of data
-C:\Users\marca\Desktop\Github\Math\Matrice\Matrice\main.cpp(126,84): warning C4267: 'argument': conversion from 'size_t' to 'const int', possible loss of data
-C:\Users\marca\Desktop\Github\Math\Matrice\Matrice\main.cpp(148,86): warning C4267: 'argument': conversion from 'size_t' to 'const int', possible loss of data
-C:\Users\marca\Desktop\Github\Math\Matrice\Matrice\main.cpp(150,86): warning C4267: 'argument': conversion from 'size_t' to 'const int', possible loss of data
-C:\Users\marca\Desktop\Github\Math\Matrice\Matrice\main.cpp(174,86): warning C4267: 'argument': conversion from 'size_t' to 'const int', possible loss of data
-C:\Users\marca\Desktop\Github\Math\Matrice\Matrice\main.cpp(205,98): warning C4267: 'argument': conversion from 'size_t' to 'const int', possible loss of data
-C:\Users\marca\Desktop\Github\Math\Matrice\Matrice\main.cpp(177): warning C4715: 'det': not all control paths return a value
+﻿  Matrice.cpp
+C:\Users\marca\Desktop\Github\Math\Matrice\Matrice\Matrice.cpp(101): warning C4715: 'Matrice::additionner': not all control paths return a value
   Matrice.vcxproj -> C:\Users\marca\Desktop\Github\Math\Matrice\x64\Debug\Matrice.exe
