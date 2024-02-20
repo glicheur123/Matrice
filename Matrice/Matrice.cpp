@@ -179,8 +179,7 @@ Matrice* Matrice::multiplier(Matrice* p_B)
 /// <returns>Retourne la valeur du calcul.</returns>
 float Matrice::determinant()
 {
-	// Si la matrice n'est pas carré.
-	if (m_m != m_n) {
+	if (m_m != m_n) { // Vérifie que la matrice soit carrée.
 		cout << "ERREUR : La matrice doit être carrée pour calculer le déterminant." << endl;
 		return 0;
 	}
@@ -188,32 +187,28 @@ float Matrice::determinant()
 	int n = m_m;
 	vector<vector<float>> data = *getData();
 
-	// Si l matrice a un ordre de 1
-	if (n == 1) {
+	if (n == 1) { // si la matrice est d'ordre 1 ou 2, on renvoit le calcul simplifié.
 		return data[0][0];
 	}
-	else if (n == 2) { // si la matrice à un ordre de 2
+	else if (n == 2) {
 		return data[0][0] * data[1][1] - data[0][1] * data[1][0];
 	}
 
-	// Calcule du déterminant
 	float det = 0;
-	for (int p = 0; p < n; p++) {
-		
-		// Matrice temporaire.
+	for (int p = 0; p < n; p++) { // Création d'une sous matrice pour le calcul
+
 		Matrice submatrix(n - 1, n - 1);
-		vector<vector<float>> subdata(n - 1, vector<float>(n - 1));
-		// Lis les valeurs de la matrices pour retirer une ligne des valeurs de la matrice subsécante.
+		vector<vector<float>>* subdata = new vector<vector<float>>(n - 1, vector<float>(n - 1));
 		for (int i = 1; i < n; i++) {
 			for (int j = 0; j < n; j++) {
 				if (j == p) continue;
 				int col = (j < p) ? j : j - 1;
-				subdata[i - 1][col] = data[i][j];
+				(*subdata)[i - 1][col] = data[i][j];
 			}
 		}
-		submatrix.setData(&subdata);
+		submatrix.setData(subdata);
 
-		// Calcule le déterminant en calculant le déterminant de la matrice subsécante.
+		// Calcule du déterminant récurif.
 		det += (p % 2 == 0 ? 1 : -1) * data[0][p] * submatrix.determinant();
 	}
 

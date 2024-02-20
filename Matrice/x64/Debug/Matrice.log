@@ -1,3 +1,17 @@
-﻿  Matrice.cpp
-C:\Users\marca\Desktop\Github\Math\Matrice\Matrice\Matrice.cpp(101): warning C4715: 'Matrice::additionner': not all control paths return a value
+﻿  main.cpp
+C:\Users\marca\Desktop\Github\Math\Matrice\Matrice\main.cpp(73,96): warning C4267: 'argument': conversion from 'size_t' to 'const int', possible loss of data
+C:\Users\marca\Desktop\Github\Math\Matrice\Matrice\main.cpp(75,93): warning C4267: 'argument': conversion from 'size_t' to 'const int', possible loss of data
+C:\Users\marca\Desktop\Github\Math\Matrice\Matrice\main.cpp(200,18): warning C4244: 'argument': conversion from 'int' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+C:\Users\marca\Desktop\Github\Math\Matrice\Matrice\main.cpp(229,86): warning C4267: 'argument': conversion from 'size_t' to 'const int', possible loss of data
+C:\Users\marca\Desktop\Github\Math\Matrice\Matrice\main.cpp(231,86): warning C4267: 'argument': conversion from 'size_t' to 'const int', possible loss of data
+C:\Users\marca\Desktop\Github\Math\Matrice\Matrice\main.cpp(263,84): warning C4267: 'argument': conversion from 'size_t' to 'const int', possible loss of data
+C:\Users\marca\Desktop\Github\Math\Matrice\Matrice\main.cpp(293,86): warning C4267: 'argument': conversion from 'size_t' to 'const int', possible loss of data
+C:\Users\marca\Desktop\Github\Math\Matrice\Matrice\main.cpp(295,86): warning C4267: 'argument': conversion from 'size_t' to 'const int', possible loss of data
+C:\Users\marca\Desktop\Github\Math\Matrice\Matrice\main.cpp(327,86): warning C4267: 'argument': conversion from 'size_t' to 'const int', possible loss of data
+C:\Users\marca\Desktop\Github\Math\Matrice\Matrice\main.cpp(358,98): warning C4267: 'argument': conversion from 'size_t' to 'const int', possible loss of data
+C:\Users\marca\Desktop\Github\Math\Matrice\Matrice\main.cpp(329): warning C4715: 'det': not all control paths return a value
   Matrice.vcxproj -> C:\Users\marca\Desktop\Github\Math\Matrice\x64\Debug\Matrice.exe
