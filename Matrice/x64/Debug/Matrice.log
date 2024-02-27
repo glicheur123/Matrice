@@ -1,17 +1,17 @@
 ﻿  main.cpp
-C:\Users\marca\Desktop\Github\Math\Matrice\Matrice\main.cpp(73,96): warning C4267: 'argument': conversion from 'size_t' to 'const int', possible loss of data
-C:\Users\marca\Desktop\Github\Math\Matrice\Matrice\main.cpp(75,93): warning C4267: 'argument': conversion from 'size_t' to 'const int', possible loss of data
-C:\Users\marca\Desktop\Github\Math\Matrice\Matrice\main.cpp(203,18): warning C4244: 'argument': conversion from 'int' to '_Ty', possible loss of data
+C:\Users\marca\Desktop\Github\Math\Matrice\Matrice\main.cpp(79,96): warning C4267: 'argument': conversion from 'size_t' to 'const int', possible loss of data
+C:\Users\marca\Desktop\Github\Math\Matrice\Matrice\main.cpp(81,94): warning C4267: 'argument': conversion from 'size_t' to 'const int', possible loss of data
+C:\Users\marca\Desktop\Github\Math\Matrice\Matrice\main.cpp(209,18): warning C4244: 'argument': conversion from 'int' to '_Ty', possible loss of data
           with
           [
               _Ty=float
           ]
-C:\Users\marca\Desktop\Github\Math\Matrice\Matrice\main.cpp(232,86): warning C4267: 'argument': conversion from 'size_t' to 'const int', possible loss of data
-C:\Users\marca\Desktop\Github\Math\Matrice\Matrice\main.cpp(234,86): warning C4267: 'argument': conversion from 'size_t' to 'const int', possible loss of data
-C:\Users\marca\Desktop\Github\Math\Matrice\Matrice\main.cpp(266,84): warning C4267: 'argument': conversion from 'size_t' to 'const int', possible loss of data
-C:\Users\marca\Desktop\Github\Math\Matrice\Matrice\main.cpp(296,86): warning C4267: 'argument': conversion from 'size_t' to 'const int', possible loss of data
-C:\Users\marca\Desktop\Github\Math\Matrice\Matrice\main.cpp(298,86): warning C4267: 'argument': conversion from 'size_t' to 'const int', possible loss of data
-C:\Users\marca\Desktop\Github\Math\Matrice\Matrice\main.cpp(330,86): warning C4267: 'argument': conversion from 'size_t' to 'const int', possible loss of data
-C:\Users\marca\Desktop\Github\Math\Matrice\Matrice\main.cpp(361,98): warning C4267: 'argument': conversion from 'size_t' to 'const int', possible loss of data
-C:\Users\marca\Desktop\Github\Math\Matrice\Matrice\main.cpp(332): warning C4715: 'det': not all control paths return a value
+C:\Users\marca\Desktop\Github\Math\Matrice\Matrice\main.cpp(238,86): warning C4267: 'argument': conversion from 'size_t' to 'const int', possible loss of data
+C:\Users\marca\Desktop\Github\Math\Matrice\Matrice\main.cpp(240,86): warning C4267: 'argument': conversion from 'size_t' to 'const int', possible loss of data
+C:\Users\marca\Desktop\Github\Math\Matrice\Matrice\main.cpp(272,84): warning C4267: 'argument': conversion from 'size_t' to 'const int', possible loss of data
+C:\Users\marca\Desktop\Github\Math\Matrice\Matrice\main.cpp(302,86): warning C4267: 'argument': conversion from 'size_t' to 'const int', possible loss of data
+C:\Users\marca\Desktop\Github\Math\Matrice\Matrice\main.cpp(304,86): warning C4267: 'argument': conversion from 'size_t' to 'const int', possible loss of data
+C:\Users\marca\Desktop\Github\Math\Matrice\Matrice\main.cpp(336,86): warning C4267: 'argument': conversion from 'size_t' to 'const int', possible loss of data
+C:\Users\marca\Desktop\Github\Math\Matrice\Matrice\main.cpp(367,98): warning C4267: 'argument': conversion from 'size_t' to 'const int', possible loss of data
+C:\Users\marca\Desktop\Github\Math\Matrice\Matrice\main.cpp(338): warning C4715: 'det': not all control paths return a value
   Matrice.vcxproj -> C:\Users\marca\Desktop\Github\Math\Matrice\x64\Debug\Matrice.exe
